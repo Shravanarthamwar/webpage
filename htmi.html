@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>High Animated Ball</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #1a1a1a;
+        }
+
+        .ball {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: #ff6347;
+            animation: bounce 2s infinite ease-in-out, colorChange 3s infinite, rotateBall 4s infinite linear;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-150px);
+            }
+        }
+
+        @keyframes colorChange {
+            0% {
+                background-color: #ff6347;
+            }
+            25% {
+                background-color: #ffd700;
+            }
+            50% {
+                background-color: #32cd32;
+            }
+            75% {
+                background-color: #1e90ff;
+            }
+            100% {
+                background-color: #ff6347;
+            }
+        }
+
+        @keyframes rotateBall {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="ball"></div>
+</body>
+</html>
